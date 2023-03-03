@@ -10,6 +10,9 @@ import java.awt.Graphics;
 import java.awt.MouseInfo;
 import java.awt.Point;
 
+import java.io.*;
+import java.nio.file.*;
+    
 public class Board extends JPanel {
     public int SQUARE_SIZE;
     public int HEIGHT;
@@ -46,10 +49,13 @@ public class Board extends JPanel {
         WIDTH=width;
 
         addMouseListener(new MouseHandler());
-
-        position=FENDecoder.fenToArray("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
-
-        
+    
+        try {
+            String content = Files.readString(Paths.get("board.fen"));
+            position=FENDecoder.fenToArray(content);
+        } catch (Exception err) {
+            err.printStackTrace(); // print Exception
+        }        
     }
 
     @Override
