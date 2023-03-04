@@ -52,9 +52,10 @@ public class Board extends JPanel {
     
         try {
             String content = Files.readString(Paths.get("board.fen"));
-            position=FENDecoder.fenToArray(content);
+            position = FENDecoder.fenToArray(content);
         } catch (Exception err) {
             err.printStackTrace(); // print Exception
+            position = FENDecoder.fenToArray("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
         }        
     }
 
