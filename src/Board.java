@@ -133,7 +133,7 @@ public class Board extends JPanel {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        g.drawImage(image,windowLocation.x-SQUARE_SIZE/2,windowLocation.y-SQUARE_SIZE/2,SQUARE_SIZE,SQUARE_SIZE,null);
+        //g.drawImage(image,windowLocation.x-SQUARE_SIZE/2,windowLocation.y-SQUARE_SIZE/2,SQUARE_SIZE,SQUARE_SIZE,null);
 
         repaint();
     }
