@@ -5,8 +5,8 @@ public class App extends JFrame {
     Container cp;
     public static Board board;
 
-    public static final int WIDTH=600;
-    public static final int HEIGHT=600+37;
+    public static final int WIDTH=594;
+    public static final int HEIGHT=615;
     public static void main(String[] args) throws Exception {
         App app=new App();
         app.setSize(WIDTH,HEIGHT);
